@@ -1,0 +1,125 @@
+China 80,796 3,169 Asia
+Italy 15,113 1,016 Europe
+Iran 10,075 429 Asia
+South Korea 7,869 66 Asia
+Spain 3,059 86 Europe
+Germany 2,512 5 Europe
+France 2,281 48 Europe
+United States 1,411 40 North America
+Japan (+Diamond Princess) 1,387 24 Asia
+Switzerland 867 6 Europe
+Norway 734 0 Europe
+Sweden 683 1 Europe
+Denmark 674 0 Europe
+Netherlands 614 5 Europe
+United Kingdom 590 10 Europe
+Belgium 399 3 Europe
+Austria 361 1 Europe
+Qatar 262 0 Asia
+Bahrain 195 0 Asia
+Singapore 187 0 Asia
+Malaysia 158 0 Asia
+Australia 156 3 Australia/Oceania
+Hong Kong 130 3 Asia
+Canada 122 1 North America
+Greece 117 1 Europe
+Finland 109 0 Europe
+Czech Republic (Czechia) 109 0 Europe
+Iceland 109 0 Europe
+Israel 100 0 Asia
+Slovenia 89 0 Europe
+United Arab Emirates 85 0 Asia
+Iraq 83 8 Asia
+Kuwait 80 0 Asia
+Portugal 78 0 Europe
+India 74 0 Asia
+Thailand 70 1 Asia
+San Marino 69 3 Europe
+Brazil 69 0 South America
+Lebanon 68 3 Asia
+Egypt 67 1 Africa
+Philippines 52 2 Asia
+Poland 51 1 Europe
+Romania 50 0 Europe
+Taiwan 49 1 Asia
+Saudi Arabia 45 0 Asia
+Ireland 43 1 Europe
+Vietnam 39 0 Asia
+Indonesia 34 1 Asia
+Russia 34 0 Europe
+State of Palestine 31 0 Asia
+Georgia 25 0 Asia
+Brunei 25 0 Asia
+Algeria 24 1 Africa
+Bulgaria 23 1 Europe
+Albania 23 1 Europe
+Chile 23 0 South America
+Peru 22 0 South America
+Costa Rica 22 0 North America
+Argentina 21 1 South America
+Pakistan 21 0 Asia
+Slovakia 21 0 Europe
+Luxembourg 19 0 Europe
+Estonia 19 0 Europe
+Croatia 19 0 Europe
+Serbia 19 0 Europe
+Oman 18 0 Asia
+Ecuador 17 0 South America
+South Africa 17 0 Africa
+Latvia 16 0 Europe
+Hungary 16 0 Europe
+Azerbaijan 15 1 Asia
+Panama 14 1 North America
+Mexico 12 0 North America
+Belarus 12 0 Europe
+Bosnia and Herzegovina 11 0 Europe
+Macao 10 0 Asia
+North Macedonia 9 0 Europe
+Malta 9 0 Europe
+Colombia 9 0 South America
+Maldives 8 0 Asia
+Tunisia 7 0 Africa
+Afghanistan 7 0 Asia
+Cyprus 7 0 Asia
+Morocco 6 1 Africa
+Moldova 6 0 Europe
+French Guiana 6 0 South America
+Dominican Republic 5 0 North America
+Senegal 5 0 Africa
+New Zealand 5 0 Australia/Oceania
+Cambodia 5 0 Asia
+Paraguay 5 0 South America
+Armenia 4 0 Asia
+Liechtenstein 4 0 Europe
+Lithuania 3 0 Europe
+Sri Lanka 3 0 Asia
+Bangladesh 3 0 Asia
+Bolivia 3 0 South America
+Martinique 3 0 North America
+Channel Islands 3 0 Europe
+Cuba 3 0 North America
+Nigeria 2 0 Africa
+Honduras 2 0 North America
+Burkina Faso 2 0 Africa
+Cameroon 2 0 Africa
+Saint Martin 2 0 North America
+Jamaica 2 0 North America
+Faeroe Islands 2 0 Europe
+Guyana 1 1 South America
+Monaco 1 0 Europe
+Jordan 1 0 Asia
+Ukraine 1 0 Europe
+Nepal 1 0 Asia
+Andorra 1 0 Europe
+Togo 1 0 Africa
+Turkey 1 0 Asia
+Bhutan 1 0 Asia
+Mongolia 1 0 Asia
+Holy See 1 0 Europe
+Gibraltar 1 0 Europe
+French Polynesia 1 0 Australia/Oceania
+DR Congo 1 0 Africa
+Côte d'Ivoire 1 0 Africa
+Réunion 1 0 Africa
+Saint Barthelemy 1 0 caribbean
+St. Vincent & Grenadines 1 0 North America
