@@ -51,7 +51,7 @@ class Coronavirus():
             try:
                 prev_data = open("Coronavirus_Email_Project\\prev.txt","r").read().split("\n")
                 Previous_data_exists=True
-                #prev_data_backup = 
+                print("Previous Data found and read.")
 
             except: 
                 print("Previous Data could not be read!")
@@ -100,17 +100,14 @@ class Coronavirus():
             new_infections_global = global_cases - prev_cases_global
             new_deaths_global = global_deaths - prev_deaths_global
             Growthfactor_global = new_infections_global/prev_new_infections_global
-            mortalitiyrate_global = new_deaths_global/global_cases * 100
+            mortalitiyrate_global = global_deaths/global_cases * 100
             #Local Cases and deaths
             new_infections_local = Country_Cases - prev_Country_Cases
             new_deaths_local = Country_Deaths - prev_Country_Deaths
             Growthfactor_local = new_infections_local / prev_new_infections_local
             mortalitiyrate_local = Country_Deaths / Country_Cases * 100
 
-            if(input("Evaluation complete. Do you wish to update the previous data? [y/n] ") == "n"):
-                update = False
-            else:
-                update= True
+
             print("I evaluated the data :)")
             #row = country_element.find_element_by_xpath("./..")
             
@@ -145,7 +142,7 @@ class Coronavirus():
             Output_string +=("\n")
             Output_string +=("New Deaths: {:,}".format(new_deaths_local).replace(",","."))
             Output_string +=("\n")
-            Output_string +=("Growthrate local: {:.2f} %".format(Growthfactor_local).replace(".",","))
+            Output_string +=("Growthfactor local: {:.2f}".format(Growthfactor_local).replace(".",","))
             Output_string +=("\n")
             Output_string +=("Mortalityrate local: {:.2f} %".format(mortalitiyrate_local).replace(".",","))
             Output_string +=("\n")
@@ -160,16 +157,23 @@ class Coronavirus():
             Output_string +=("\n")
             Output_string +=("New deaths: {:,}".format(new_deaths_global).replace(",","."))
             Output_string +=("\n")
-            Output_string +=("Growthrate global: {:.2f}%".format(Growthfactor_global).replace(".",","))
+            Output_string +=("Growtfactor global: {:.2f}".format(Growthfactor_global).replace(".",","))
             Output_string +=("\n")
             Output_string +=("Mortalitiyrate global: {:.2f}%".format(mortalitiyrate_global).replace(".",","))
 
             print(Output_string)
 
             #Creating files and backups
+            update = False
+            if(input("Do you wish to update the previous data? [y/n] ") == "n"):
+                update = False
+            else:
+                update= True
+            
+           
             if(update):
-                log_file = open("Coronavirus_Email_Project\\log.txt","w")
-                log_file.write("Date: {} _ LC: {} _ NLC: +{} _ LDs: {} _ NLD: +{} _ G: {} _ GC: {} _ NGC: +{} _ GD: {} _ NGD: +{} _ G: {} ".format(Date,Country_Cases,new_infections_local,Country_Deaths,new_deaths_local,Growthfactor_local,global_cases,new_infections_global,global_deaths,new_deaths_global,Growthfactor_global))
+                log_file = open("Coronavirus_Email_Project\\log.txt","a+")
+                log_file.write("Date: {} _ LC: {} _ NLC: +{} _ LDs: {} _ NLD: +{} _ G: {} _ GC: {} _ NGC: +{} _ GD: {} _ NGD: +{} _ G: {} \n".format(Date,Country_Cases,new_infections_local,Country_Deaths,new_deaths_local,Growthfactor_local,global_cases,new_infections_global,global_deaths,new_deaths_global,Growthfactor_global))
                 log_file.close()
                 backup_prev_file= open("Coronavirus_Email_Project\\prev_backup.txt","w")
                 Writing_to_file(backup_prev_file,prev_data)
@@ -184,46 +188,40 @@ class Coronavirus():
                 Cases_file.write("{} {}".format(new_infections_global,new_infections_local))
                 Cases_file.close()
 
-            #the mail function
-            #send_mail(country_element.text, total_cases, new_cases, total_deaths, new_deaths, active_cases, total_recovered, serious_critical)
+                
 
-            #self.driver.close()
+            #the mail function
+            Sending_a_Mail(Output_string)
+
         except:
             print("failed!")
             self.driver.quit()
-'''
-    def send_mail(country_element, total_cases, new_cases, total_deaths, new_deaths, active_cases, total_recovered, serious_critical):
-        server = smtplib.SMTP('smtp.gmail.com', 587)
-        server.ehlo()
-        server.starttls()
-        server.ehlo()
 
-        server.login('email', 'password')
+def Sending_a_Mail(Output_string):
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.ehlo()
+    server.starttls()
+    server.ehlo()
 
-        subject = 'Coronavirus stats in your country today!'
+    server.login("myfirstpythonscript28@gmail.com", "HSemViencL5R3tY")
 
-        body = 'Today in ' + country_element + '\
-            \nThere is new data on coronavirus:\
-            \nTotal cases: ' + total_cases +'\
-            \nNew cases: ' + new_cases + '\
-            \nTotal deaths: ' + total_deaths + '\
-            \nNew deaths: ' + new_deaths + '\
-            \nActive cases: ' + active_cases + '\
-            \nTotal recovered: ' + total_recovered + '\
-            \nSerious, critical cases: ' + serious_critical  + '\
-            \nCheck the link: https://www.worldometers.info/coronavirus/'
+    subject = "Coronavirus stats in your country today!"
 
-        msg = f"Subject: {subject}\n\n{body}"
+    body = Output_string + "\n\nCheck these links: \nhttps://www.worldometers.info/coronavirus/ \nhttps://www.worldometers.info/coronavirus/countries-where-coronavirus-has-spread/"
 
-        server.sendmail(
-            'Coronavirus',
-            'email',
-            msg
-        )
-        print('Hey Email has been sent!')
+    msg = f"Subject: {subject}\n\n{body}"
 
-        server.quit()
-'''
+    emails = ["aleks.jevtic315@gmail.com"]
+
+    server.sendmail(
+        "Coronavirus",
+        emails,
+        msg
+    )
+    print('Hey Email has been sent!')
+
+    server.quit()
+
 
 def Writing_to_file(filey,data1):
     for i in data1:
