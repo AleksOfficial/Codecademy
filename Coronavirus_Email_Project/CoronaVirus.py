@@ -4,23 +4,13 @@ import time
 import re
 from datetime import datetime
 import smtplib
-#import pandas as pd
-
-# prev_data = open("log.txt","r")
-# print(prev_data)
-# data=[]
-# for i in prev_data:
-#     data.append(i.split(" "))
-# print(data)
-# exit()
+import sys
 
 class Coronavirus():
     def __init__(self):
-        self.driver = webdriver.Chrome("Coronavirus_Email_Project\\chromedriver.exe")
-        # self.driver = webdriver.Chrome("chromedriver.exe")
+        #self.driver = webdriver.Chrome("Coronavirus_Email_Project\\chromedriver.exe")
+        self.driver = webdriver.Chrome("chromedriver.exe")
         return None
-
-         
 
     def get_data(self,Country):
 
@@ -36,20 +26,22 @@ class Coronavirus():
             
             #Creating Variables
             #Previous_Day Variables
-            #11.03: Removed Date from prev. data
+            
             Previous_data_exists=False
             prev_continents_cases = {"Europe":0,"Africa":0, "Australia/Oceania":0,"Asia":0,"caribbean":0,"North America":0,"South America":0}
             prev_continents_deaths = {"Europe":0,"Africa":0, "Australia/Oceania":0,"Asia":0,"caribbean":0,"North America":0,"South America":0}
             prev_Country_Cases = 0
             prev_Country_Deaths= 0
-            prev_rates = open("Coronavirus_Email_Project\\Cases.txt","r").read().split(" ")
+            #prev_rates = open("Coronavirus_Email_Project\\Cases.txt","r").read().split(" ")
+            prev_rates = open("Cases.txt","r").read().split(" ")
             prev_new_infections_global = int(prev_rates[0])
             prev_new_infections_local = int(prev_rates[1])
             
                 #The table will be saved in a text file. This way, we can calculate the variables with a function
                 #There will be another file created for analysis with the same content, but with a date added. Perhaps we can edit the for loops and add it at the end of the file
             try:
-                prev_data = open("Coronavirus_Email_Project\\prev.txt","r").read().split("\n")
+                #prev_data = open("Coronavirus_Email_Project\\prev.txt","r").read().split("\n")
+                prev_data = open("prev.txt","r").read().split("\n")
                 Previous_data_exists=True
                 print("Previous Data found and read.")
 
@@ -65,8 +57,6 @@ class Coronavirus():
                         prev_data.close()
                         time.sleep(3)
                         exit()
-                    
-            #exit()
 
             #Current variables
             Date=datetime.date(datetime.now())
@@ -82,7 +72,8 @@ class Coronavirus():
             new_deaths_local =0
             Growthfactor_global=0
             Growthfactor_local=0
-
+            
+            print("I created the variables :) ")
             
             #Evaluation of data
             #inserting Data into variables
@@ -92,6 +83,15 @@ class Coronavirus():
             
                        
             #Calculations 
+            #Formula is based on this video: https://www.youtube.com/watch?v=Kas0tIxDvrg
+            #The Virus Growth behaves exponentially. it can be described with the formula:
+            #deltaNd = E * p * Nd  | Nd + 1 = E * p * Nd + Nd  -->  Nd = (1 + E* p)^d * N0
+            
+            #Nd = Number of cases on a given day
+            #E = Average number of people exposed to infected person each day
+            #p = probability exposure becomes an infection
+            #since these Factors can only be manipulated by precautions like washing hands or exposure to infected people, the growthrate E*p can be calculated by looking at the  I = E*p  
+            # I = Growthfactor -> as seen in the caluclations above
             prev_cases_global = sum(prev_continents_cases.values())
             prev_deaths_global = sum(prev_continents_deaths.values())
             global_cases = sum(continents_cases.values())
@@ -107,25 +107,9 @@ class Coronavirus():
             Growthfactor_local = new_infections_local / prev_new_infections_local
             mortalitiyrate_local = Country_Deaths / Country_Cases * 100
 
-
-            print("I evaluated the data :)")
-            #row = country_element.find_element_by_xpath("./..")
+            print("Caluculations complete! :D\n Printing data .. \n\n")
             
-            #data_spaced = data.splt(" ")
-            print("Now I'll print the data :)")
-
-            #The Formula needs to be done. it is based on this video: https://www.youtube.com/watch?v=Kas0tIxDvrg
-            #The Virus Growth behaves exponentially. it can be described with the formula:
-            #deltaNd = E * p * Nd  | Nd + 1 = E * p * Nd + Nd  -->  Nd = (1 + E* p)^d * N0
-            
-            #Nd = Number of cases on a given day
-            #E = Average number of people exposed to infected person each day
-            #p = probability exposure becomes an infection
-            #since these Factors can only be manipulated by precautions like washing hands or exposure to infected people, the growthrate E*p can be calculated by  
-
-            # Meaning the Equation would be like this: Nd +1 = (1+I)*Nd
-            #maybe creating a log file with the date
-         
+            #Creating the Text for both the command line and Email
             Output_string =""
             Output_string +=("Date: "+str(Date))
             Output_string +=("\n\n")
@@ -163,28 +147,34 @@ class Coronavirus():
 
             print(Output_string)
 
-            #Creating files and backups
-            update = False
-            if(input("Do you wish to update the previous data? [y/n] ") == "n"):
-                update = False
-            else:
-                update= True
+            #Writing data into the files updating the backups
+            #update and if clause is just for internal testing and can be removed. Script is supposed to run only once at the end of the day
+              
+            update = True
+            # if(input("Do you wish to update the previous data? [y/n] ") == "n"):
+            #     update = False
+            # else:
+            #     update= True
             
-           
             if(update):
-                log_file = open("Coronavirus_Email_Project\\log.txt","a+")
+                #log_file = open("Coronavirus_Email_Project\\log.txt","a+")
+                log_file = open("log.txt","a+")
                 log_file.write("Date: {} _ LC: {} _ NLC: +{} _ LDs: {} _ NLD: +{} _ G: {} _ GC: {} _ NGC: +{} _ GD: {} _ NGD: +{} _ G: {} \n".format(Date,Country_Cases,new_infections_local,Country_Deaths,new_deaths_local,Growthfactor_local,global_cases,new_infections_global,global_deaths,new_deaths_global,Growthfactor_global))
                 log_file.close()
-                backup_prev_file= open("Coronavirus_Email_Project\\prev_backup.txt","w")
+                #backup_prev_file= open("Coronavirus_Email_Project\\prev_backup.txt","w")
+                backup_prev_file= open("prev_backup.txt","w")
                 Writing_to_file(backup_prev_file,prev_data)
                 backup_prev_file.close()
-                prev_file = open("Coronavirus_Email_Project\\prev.txt","w")
+                #prev_file = open("Coronavirus_Email_Project\\prev.txt","w")
+                prev_file = open("prev.txt","w")
                 Writing_to_file(prev_file,new_table)
                 prev_file.close()
-                backup_Cases_file = open("Coronavirus_Email_Project\\Cases_backup.txt","w")
+                #backup_Cases_file = open("Coronavirus_Email_Project\\Cases_backup.txt","w")
+                backup_Cases_file = open("Cases_backup.txt","w")
                 backup_Cases_file.write("{} {}".format(prev_new_infections_global, prev_new_infections_local))
                 backup_Cases_file.close()
-                Cases_file = open("Coronavirus_Email_Project\\Cases.txt","w")
+                #Cases_file = open("Coronavirus_Email_Project\\Cases.txt","w")
+                Cases_file = open("Cases.txt","w")
                 Cases_file.write("{} {}".format(new_infections_global,new_infections_local))
                 Cases_file.close()
 
@@ -192,13 +182,21 @@ class Coronavirus():
 
             #the mail function
             Sending_a_Mail(Output_string)
+            sys.exit()
 
-        except:
+
+        except SystemExit:
+            print("Success!")
+            self.driver.quit()
+            
+        except: 
             print("failed!")
             self.driver.quit()
+            
+            
 
 def Sending_a_Mail(Output_string):
-    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server = smtplib.SMTP("smtp.gmail.com", 587)
     server.ehlo()
     server.starttls()
     server.ehlo()
@@ -207,7 +205,7 @@ def Sending_a_Mail(Output_string):
 
     subject = "Coronavirus stats in your country today!"
 
-    body = Output_string + "\n\nCheck these links: \nhttps://www.worldometers.info/coronavirus/ \nhttps://www.worldometers.info/coronavirus/countries-where-coronavirus-has-spread/"
+    body = Output_string + "\n\nCheck these links: \n\nhttps://www.worldometers.info/coronavirus/ \nhttps://www.worldometers.info/coronavirus/countries-where-coronavirus-has-spread/"
 
     msg = f"Subject: {subject}\n\n{body}"
 
@@ -218,9 +216,10 @@ def Sending_a_Mail(Output_string):
         emails,
         msg
     )
-    print('Hey Email has been sent!')
+    print("Email has been sent!")
 
     server.quit()
+ 
 
 
 def Writing_to_file(filey,data1):
@@ -274,3 +273,5 @@ def Evaluation(new_table,continents_cases,continents_deaths,Country_Cases,Countr
 Country = "Austria" 
 bot = Coronavirus()
 bot.get_data(Country)
+
+
