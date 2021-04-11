@@ -1,0 +1,10 @@
+2020-05-23 23:43:25
+User Choice: 1 -> define upper limit and see all Fibonacci numbers up to specified value. Upper Limit: 10. Fibonacci Sequence: [0, 1, 1, 2, 3, 5, 8]
+User Choice: 1 -> define upper limit and see all Fibonacci numbers up to specified value. Upper Limit: 555. Fibonacci Sequence: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377]
+User Choice: 2 -> define lower and upper limit and see all Fibonacci numbers in between.Upper Limit: 6696. Lower Limit: 33. Fibonacci Sequence: [34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
+User Choice: 3 -> Enter a number and see if the number is a Fibonacci number or not. Number entered: 10. Element within Fibonacci-Sequence: False
+User Choice: 3 -> Enter a number and see if the number is a Fibonacci number or not.  Number entered: 55. Element within Fibonacci-Sequence: True; Position 11
+User Choice: 3 -> Enter a number and see if the number is a Fibonacci number or not. Number entered: 74. Element within Fibonacci-Sequence: False
+User Choice: 3 -> Enter a number and see if the number is a Fibonacci number or not. Number entered: 9998. Element within Fibonacci-Sequence: False
+User Choice: 1 -> define upper limit and see all Fibonacci numbers up to specified value. Upper Limit: 99999. Fibonacci Sequence: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025]
+User Choice: 0 -> Exit

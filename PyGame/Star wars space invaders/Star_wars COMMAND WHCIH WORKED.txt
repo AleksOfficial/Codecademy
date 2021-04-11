@@ -1,0 +1,5 @@
+every single one of those commands worked actually. it is important to add the data with the command add-data (from;to) to the pyinstaller command
+furthermore, the game assets are not in the single exe file included. they have to be included seperately in the same directory where the exe file is. 
+
+that should be it tho. 
+Also: I compiled the program on my desktop PC. it might work better there but I'm not sure about that. 

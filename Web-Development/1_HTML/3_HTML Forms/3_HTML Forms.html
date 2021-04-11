@@ -1,0 +1,142 @@
+<!--
+    HTTP request instructs receiving comp how to handle inc info
+    form element: collecting info 
+    -> action = where information is sent to
+    -> method: HTTP verb htat is included in request
+    -> type attribute for input determines how it renders on webpage
+        attributes:
+    -> text = textfield
+    -> name = important, else nothing will be submitted to the form
+    -> value = what is inside of textfield, can be prefilled
+    label tag is used to describe input field
+    -> uses for attribute to identify with ID of input field
+    -> you can click it and be in input field associated
+    password
+    -> changes chars to dots or asteriks
+    -> when submitting tho, value attribute in background is plain text
+    number
+    -> step attribute adds arrows at the side to increment at given value f.e. step="5"
+    range
+    -> input bar with slider
+    -> needs min and max value  
+    checkbox
+    -> value =  what is selected
+    -> name = what is grouped together
+    radiobutton
+    -> value =  what is selected
+    -> name = what is grouped together
+    -> only one can be chosen
+    drop down
+    -> select tag
+    -> option tag is for option 
+    datalist
+    -> creates a field where user can type in option, with a list of elements that can be selected
+    -> submitting form means that the stuff he typed in will get sent as value attr.
+    -> doesn't have to be an option provided, if it is it changes to the text in value attr
+    -> input type of text needs attribute list with the ID of the datalist
+    textarea
+    -> multiple rows instead of just a single one like in text input
+    submit
+
+    other
+    section tag used to represent standalone section for which a more specific element can't be found
+    class = global attribute 
+    hr -> break between paragraph elements with horizontal line
+    ------------------
+Validation
+-> Server side validation
+-> Client side validation: browser does val. -> saves time for server
+  required statement
+  -> forces user to put in something
+  min/max
+  -> in the number field, you can restrict the input range 
+  minlength/maxlength
+  -> is the minimum/maximum length that is allowed to input in a regex
+  pattern
+  -> constrain chars and length at the same time on regular expression
+  -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="3_style1.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <section id="overlay">
+      <img src="https://content.codecademy.com/courses/web-101/unit-6/htmlcss1-img_burger-logo.svg" alt="Davie's Burgers Logo" id="logo">
+      <hr>
+      <form action="./3_submission.html" method ="POST">
+        <h1>Create your fav Burger son</h1>
+        <p>This is the way.</p>
+        <label for="username">Username:</label>
+  			<input type="text" name="username" id="username">
+        <br>
+        <label for="user-pw">Password:</label>
+        <input type="password" name="user-pw" id="user-pw">
+        <section class="patties">
+          <label for="amount">How many patties pls</label>
+          <input type="number" step="1" name="amount" id="amount">
+        </section>
+        <section class="cooked">
+          <label for="doneness">How do you want your patty cooked</label>
+          <br>
+          <span>Rare</span>
+          <input type="range" id="doneness" name="doneness" min="0" max="5" value="3" step="0.5">
+          <span>Well-Done</span>
+        </section>
+        <section class="toppings">
+          <span>What toppings would you like?</span><br>
+          <input type="checkbox" id="lettuce" name="topping" value="lettuce">
+          <label for="lettuce">Lettuce</label>
+          <input type="checkbox" id="tomato" name="topping" value="tomato">
+          <label for="tomato">Tomato</label>
+          <input type="checkbox" id="chicken" name="topping" value="chicken">
+          <label for="chicken">Chicken</label>   
+        </section>
+        <section class="cheesy">
+          <span>Would you like to add cheese?</span>
+          <br>
+	        <input type="radio"name="cheese" id="yes" value="yes">
+
+          <label for="yes">Yes</label>
+	        <input type="radio"name="cheese" id="no" value="no">
+
+          <label for="no">No</label>
+        </section>
+        <section class="bun-type">
+					<label for="bun">What type of bun would you like?</label>
+          <select id="bun" name="bun">
+            <option value="sesame">Sesame</option>
+            <option value="potato">Potato</option>
+            <option value="randombun">randomchoice</option>
+          </select>
+        </section>
+        <section class="sauce-selection">
+          <label for="sauce">What type of sauce would you like?</label>
+          <input type="text" list="sauces" id="sauce" name="sauce">
+          <datalist id="sauces">
+            <option value="ketchup">Ketchup</option>
+            <option value="mayo">Mayonese</option>
+          </datalist>          
+        </section>   
+        <section class="extra-info">
+          <label for="extra">Anything else you want to add?</label>
+          <br>
+          <textarea id="extra" name="extra" rows="3" cols="40" placeholder="Type it in pls."></textarea>
+        </section>
+        <section class="submission">
+          <input type="submit" value="Submit">
+        </section>
+					
+          
+        
+        
+        
+          </form>
+      
+      
+    </section>
+  </body>
+</html>

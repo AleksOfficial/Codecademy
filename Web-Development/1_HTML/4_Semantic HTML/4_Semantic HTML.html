@@ -1,0 +1,58 @@
+<!--
+  Semantic HTML: elements are based on their meaning, not how they are presented
+  span/div elements are non semantic cuz no information whats inside them
+  ^header element is a semantic element
+
+  Why use it:
+  -> Accessibility: inceases for old people/disabled people/mobile devices: screenreader/browser can interpret it better
+  -> SEO: identify the content of site and display most important content appropriately
+  -> Easy to understand: easier to read for web devs
+
+  section: defines elements in a doc such as headings/chapters
+  article: element holds content that makes sense on its own
+
+-->
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="header"> <!--can be <header> instead-->
+      <h1>Navigational Links</h1>
+      <div id="nav"> <!--can be <nav> instead-->
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#posts">Posts</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="main"> <!-- can be <main> instead; especially good for screen readers + identifying for webbrowsers --> 
+      <p>This is where the main content will go once the page is built out!</p>
+      <div id="section">    <!-- can be <section> instead-->
+        <article><!-- signals an independent piece of content like a blog entry or something-->
+          <h2>Facts About Dogs</h2>
+          <p>
+          Dogs have a sense of time. It's been proven that they know the difference between a hour and five. If conditioned to, they can predict future events, such as regular walk times.
+          </p>
+        </article>
+        <div id="aside"> <!--can be <aside> instead, is additional information to the previous article. not necessary info tho-->
+          <p>A study was conducted on dogs being away from their owners for varying hours and the studies show that dogs who were away from their owners the longest showed the greatest amount of affection!
+          </p> 
+        </div>
+      </div>
+      <figure><!-- signals for a figure-->
+        <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg">
+        <figcaption>Shows a good boi</figcaption> <!-- used to describe a figure-->
+      </figure>
+      <audio controls> <!-- controls attribute adds the player needed to control the audio file. also other attributes can be inserted here like loop/autoplay-->
+        <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+      </audio>
+      <video controls src="https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4">Video not supported</video>
+      <embed src="https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif"> <!-- same here-->
+    </div>
+    
+    <div id="footer"> <!-- can be <footer> instead-->
+      <p>Contact me at +1 234 567 8910 </p>
+    </div>
+    
+  </body>
+</html>

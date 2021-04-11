@@ -1,0 +1,57 @@
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background-color: white;
+  
+}
+nav li{
+  display: inline-block;
+  padding: 0 20px;
+  
+}
+nav a{
+  text-decoration: none;
+}
+a.blue{
+  color:blue;
+}
+
+.banner{
+  background-color: #4d00ff;
+  color:white;
+  margin-top:50px;
+  text-align:center;
+  padding:100px 0;
+}
+
+.bold{
+  font-weight:900;
+}
+.gritter-section{
+  padding:50px 50px;
+}
+.avatar{
+  background-image: url("../images/better_than_drake.png");
+  background-size:cover;
+  height:50px;
+  width:50px;
+  border-radius: 50px;
+  display:inline-block;
+  vertical-align: middle;
+}
+#small-gritty{
+  height:100px;
+  width: 100px;
+  filter: drop-shadow(1px 1px 1px black);
+  
+  
+}
+
+#gritter{
+  color: #4d00ff;
+  font-size: 100px;
+}
+#greets ul{
+  list-style-type: none;
+}

@@ -1,125 +1,220 @@
-China 80,796 3,169 Asia
-Italy 15,113 1,016 Europe
-Iran 10,075 429 Asia
-South Korea 7,869 66 Asia
-Spain 3,059 86 Europe
-Germany 2,512 5 Europe
-France 2,281 48 Europe
-United States 1,411 40 North America
-Japan (+Diamond Princess) 1,387 24 Asia
-Switzerland 867 6 Europe
-Norway 734 0 Europe
-Sweden 683 1 Europe
-Denmark 674 0 Europe
-Netherlands 614 5 Europe
-United Kingdom 590 10 Europe
-Belgium 399 3 Europe
-Austria 361 1 Europe
-Qatar 262 0 Asia
-Bahrain 195 0 Asia
-Singapore 187 0 Asia
-Malaysia 158 0 Asia
-Australia 156 3 Australia/Oceania
-Hong Kong 130 3 Asia
-Canada 122 1 North America
-Greece 117 1 Europe
-Finland 109 0 Europe
-Czech Republic (Czechia) 109 0 Europe
-Iceland 109 0 Europe
-Israel 100 0 Asia
-Slovenia 89 0 Europe
-United Arab Emirates 85 0 Asia
-Iraq 83 8 Asia
-Kuwait 80 0 Asia
-Portugal 78 0 Europe
-India 74 0 Asia
-Thailand 70 1 Asia
-San Marino 69 3 Europe
-Brazil 69 0 South America
-Lebanon 68 3 Asia
-Egypt 67 1 Africa
-Philippines 52 2 Asia
-Poland 51 1 Europe
-Romania 50 0 Europe
-Taiwan 49 1 Asia
-Saudi Arabia 45 0 Asia
-Ireland 43 1 Europe
-Vietnam 39 0 Asia
-Indonesia 34 1 Asia
-Russia 34 0 Europe
-State of Palestine 31 0 Asia
-Georgia 25 0 Asia
-Brunei 25 0 Asia
-Algeria 24 1 Africa
-Bulgaria 23 1 Europe
-Albania 23 1 Europe
-Chile 23 0 South America
-Peru 22 0 South America
-Costa Rica 22 0 North America
-Argentina 21 1 South America
-Pakistan 21 0 Asia
-Slovakia 21 0 Europe
-Luxembourg 19 0 Europe
-Estonia 19 0 Europe
-Croatia 19 0 Europe
-Serbia 19 0 Europe
-Oman 18 0 Asia
-Ecuador 17 0 South America
-South Africa 17 0 Africa
-Latvia 16 0 Europe
-Hungary 16 0 Europe
-Azerbaijan 15 1 Asia
-Panama 14 1 North America
-Mexico 12 0 North America
-Belarus 12 0 Europe
-Bosnia and Herzegovina 11 0 Europe
-Macao 10 0 Asia
-North Macedonia 9 0 Europe
-Malta 9 0 Europe
-Colombia 9 0 South America
-Maldives 8 0 Asia
-Tunisia 7 0 Africa
-Afghanistan 7 0 Asia
-Cyprus 7 0 Asia
-Morocco 6 1 Africa
-Moldova 6 0 Europe
-French Guiana 6 0 South America
-Dominican Republic 5 0 North America
-Senegal 5 0 Africa
-New Zealand 5 0 Australia/Oceania
-Cambodia 5 0 Asia
-Paraguay 5 0 South America
-Armenia 4 0 Asia
-Liechtenstein 4 0 Europe
-Lithuania 3 0 Europe
-Sri Lanka 3 0 Asia
-Bangladesh 3 0 Asia
-Bolivia 3 0 South America
-Martinique 3 0 North America
-Channel Islands 3 0 Europe
-Cuba 3 0 North America
-Nigeria 2 0 Africa
-Honduras 2 0 North America
-Burkina Faso 2 0 Africa
-Cameroon 2 0 Africa
-Saint Martin 2 0 North America
-Jamaica 2 0 North America
-Faeroe Islands 2 0 Europe
-Guyana 1 1 South America
-Monaco 1 0 Europe
-Jordan 1 0 Asia
-Ukraine 1 0 Europe
-Nepal 1 0 Asia
-Andorra 1 0 Europe
-Togo 1 0 Africa
-Turkey 1 0 Asia
-Bhutan 1 0 Asia
-Mongolia 1 0 Asia
-Holy See 1 0 Europe
-Gibraltar 1 0 Europe
-French Polynesia 1 0 Australia/Oceania
-DR Congo 1 0 Africa
-Côte d'Ivoire 1 0 Africa
-Réunion 1 0 Africa
-Saint Barthelemy 1 0 caribbean
-St. Vincent & Grenadines 1 0 North America
+United States 29,751,543 538,895 North America
+India 11,260,750 158,075 Asia
+Brazil 11,055,480 266,614 South America
+Russia 4,342,474 89,809 Europe
+United Kingdom 4,228,998 124,797 Europe
+France 3,909,560 88,933 Europe
+Spain 3,160,970 71,436 Europe
+Italy 3,101,093 100,479 Europe
+Turkey 2,793,632 29,094 Asia
+Germany 2,515,208 72,763 Europe
+Colombia 2,278,861 60,598 South America
+Argentina 2,154,694 53,121 South America
+Mexico 2,130,477 190,923 North America
+Poland 1,811,036 45,599 Europe
+Iran 1,706,559 60,867 Asia
+South Africa 1,521,706 50,803 Africa
+Ukraine 1,410,061 27,204 Europe
+Indonesia 1,392,945 37,757 Asia
+Peru 1,374,467 47,973 South America
+Czech Republic (Czechia) 1,335,815 22,147 Europe
+Netherlands 1,128,202 15,917 Europe
+Canada 890,698 22,276 North America
+Chile 864,064 21,182 South America
+Romania 835,552 21,056 Europe
+Portugal 811,306 16,595 Europe
+Israel 807,755 5,926 Asia
+Belgium 789,008 22,292 Europe
+Iraq 735,626 13,618 Asia
+Sweden 695,975 13,042 Europe
+Philippines 600,428 12,528 Asia
+Pakistan 593,453 13,281 Asia
+Switzerland 566,412 10,062 Europe
+Bangladesh 552,087 8,489 Asia
+Serbia 494,106 4,599 Europe
+Morocco 486,325 8,683 Africa
+Austria 479,391 8,757 Europe
+Hungary 475,207 16,146 Europe
+Jordan 442,202 5,046 Asia
+Japan (+Diamond Princess) 441,383 8,312 Asia
+United Arab Emirates 415,705 1,345 Asia
+Lebanon 401,826 5,134 Asia
+Saudi Arabia 380,572 6,539 Asia
+Panama 345,236 5,934 North America
+Slovakia 325,993 8,037 Europe
+Malaysia 316,269 1,186 Asia
+Belarus 297,514 2,055 Europe
+Ecuador 294,618 16,043 South America
+Nepal 274,869 3,012 Asia
+Georgia 273,137 3,601 Asia
+Bulgaria 263,303 10,764 Europe
+Bolivia 254,736 11,845 South America
+Croatia 247,099 5,621 Europe
+Dominican Republic 243,778 3,191 North America
+Tunisia 238,017 8,225 Africa
+Azerbaijan 237,260 3,250 Asia
+Ireland 223,957 4,452 Europe
+Kazakhstan 219,325 2,819 Asia
+Denmark 215,791 2,381 Europe
+Greece 209,462 6,843 Europe
+Costa Rica 206,640 2,833 North America
+Kuwait 203,055 1,141 Asia
+Lithuania 202,900 3,341 Europe
+State of Palestine 200,382 2,170 Asia
+Moldova 196,475 4,150 Europe
+Slovenia 196,421 3,904 Europe
+Egypt 187,094 11,038 Africa
+Guatemala 179,563 6,493 North America
+Armenia 175,198 3,232 Asia
+Honduras 174,243 4,283 North America
+Paraguay 169,860 3,343 South America
+Qatar 167,888 264 Asia
+Ethiopia 167,133 2,442 Africa
+Nigeria 158,906 1,982 Africa
+Oman 144,831 1,597 Asia
+Venezuela 142,774 1,391 South America
+Myanmar 142,059 3,200 Asia
+Libya 140,688 2,297 Africa
+Bosnia and Herzegovina 138,542 5,345 Europe
+Bahrain 127,255 473 Asia
+Algeria 114,382 3,018 Africa
+Albania 114,209 1,969 Europe
+Kenya 109,643 1,886 Africa
+North Macedonia 108,350 3,228 Europe
+South Korea 93,263 1,645 Asia
+Latvia 90,997 1,705 Europe
+China 90,002 4,636 Asia
+Kyrgyzstan 86,606 1,475 Asia
+Ghana 86,465 647 Africa
+Sri Lanka 86,039 507 Asia
+Zambia 82,897 1,137 Africa
+Montenegro 80,803 1,092 Europe
+Uzbekistan 80,247 622 Asia
+Estonia 77,491 669 Europe
+Norway 76,154 632 Europe
+Uruguay 64,700 658 South America
+Finland 63,110 774 Europe
+Mozambique 62,882 700 Africa
+El Salvador 61,539 1,923 North America
+Singapore 60,052 29 Asia
+Cuba 57,607 352 North America
+Luxembourg 56,822 668 Europe
+Afghanistan 55,894 2,451 Asia
+Uganda 40,479 334 Africa
+Namibia 40,187 439 Africa
+Cyprus 37,230 233 Asia
+Cameroon 36,794 566 Africa
+Zimbabwe 36,289 1,487 Africa
+Senegal 36,039 930 Africa
+Côte d'Ivoire 35,331 204 Africa
+Botswana 32,912 413 Africa
+Malawi 32,469 1,070 Africa
+Australia 29,061 909 Australia/Oceania
+Sudan 28,766 1,915 Africa
+Jamaica 27,465 460 North America
+DR Congo 26,627 712 Africa
+Thailand 26,501 85 Asia
+Malta 24,847 335 Europe
+Angola 21,108 515 Africa
+Maldives 20,919 64 Asia
+Madagascar 20,155 300 Africa
+Rwanda 19,659 268 Africa
+French Polynesia 18,482 141 Australia/Oceania
+Mayotte 18,413 129 Africa
+Mauritania 17,340 442 Africa
+Eswatini 17,188 658 Africa
+Guinea 16,912 97 Africa
+French Guiana 16,693 87 South America
+Syria 16,042 1,068 Asia
+Gabon 16,015 91 Africa
+Cabo Verde 15,806 154 Africa
+Tajikistan 13,308 90 Asia
+Réunion 13,125 59 Africa
+Haiti 12,536 250 North America
+Belize 12,335 315 North America
+Burkina Faso 12,181 143 Africa
+Hong Kong 11,121 202 Asia
+Andorra 11,069 112 Europe
+Lesotho 10,523 308 Africa
+Guadeloupe 10,149 162 North America
+Congo 9,179 131 Africa
+Suriname 8,980 175 South America
+South Sudan 8,870 102 Africa
+Guyana 8,814 203 South America
+Mali 8,613 358 Africa
+Bahamas 8,600 181 North America
+Somalia 8,438 307 Africa
+Aruba 8,110 77 North America
+Trinidad and Tobago 7,736 140 North America
+Togo 7,598 92 Africa
+Martinique 6,818 46 North America
+Nicaragua 6,489 174 North America
+Equatorial Guinea 6,371 96 Africa
+Benin 6,338 81 Africa
+Djibouti 6,157 63 Africa
+Iceland 6,067 29 Europe
+Central African Republic 5,021 63 Africa
+Niger 4,828 177 Africa
+Curaçao 4,813 22 North America
+Gambia 4,792 153 Africa
+Gibraltar 4,255 93 Europe
+Chad 4,193 146 Africa
+Channel Islands 4,042 86 Europe
+San Marino 3,984 77 Europe
+Sierra Leone 3,921 79 Africa
+Saint Lucia 3,871 46 North America
+Comoros 3,606 146 Africa
+Mongolia 3,372 3 Asia
+Guinea-Bissau 3,312 49 Africa
+Barbados 3,303 37 North America
+Seychelles 3,000 15 Africa
+Eritrea 2,944 7 Africa
+Liechtenstein 2,594 55 Europe
+Yemen 2,586 654 Asia
+Vietnam 2,526 35 Asia
+New Zealand 2,409 26 Australia/Oceania
+Burundi 2,334 3 Africa
+Turks and Caicos 2,177 15 North America
+Sint Maarten 2,074 27 North America
+Monaco 2,028 26 Europe
+Liberia 2,024 85 Africa
+Sao Tome & Principe 1,961 32 Africa
+Papua New Guinea 1,670 16 Australia/Oceania
+St. Vincent & Grenadines 1,663 8 North America
+Saint Martin 1,571 12 North America
+Cambodia 1,060 0 Asia
+Taiwan 977 10 Asia
+Isle of Man 952 25 Europe
+Bhutan 868 1 Asia
+Antigua and Barbuda 862 22 North America
+Bermuda 724 12 North America
+Faeroe Islands 660 1 Europe
+Mauritius 641 10 Africa
+Saint Barthelemy 638 1 North America
+Caribbean Netherlands 540 5 North America
+Tanzania 509 21 Africa
+Cayman Islands 451 2 North America
+Brunei 190 3 Asia
+British Virgin Islands 153 1 North America
+Grenada 148 1 North America
+Dominica 144 0 North America
+Timor-Leste 142 0 Asia
+New Caledonia 70 0 Australia/Oceania
+Fiji 66 2 Australia/Oceania
+Falkland Islands 54 0 South America
+Macao 48 0 Asia
+Laos 47 0 Asia
+Saint Kitts & Nevis 41 0 North America
+Greenland 31 0 North America
+Holy See 27 0 Europe
+Saint Pierre & Miquelon 24 0 North America
+Montserrat 20 1 North America
+Wallis & Futuna 19 0 Australia/Oceania
+Anguilla 18 0 North America
+Solomon Islands 18 0 Australia/Oceania
+Western Sahara 10 1 Africa
+MS Zaandam 9 2
+Marshall Islands 4 0 Australia/Oceania
+Samoa 3 0 Australia/Oceania
+Vanuatu 3 0 Australia/Oceania
+Micronesia 1 0 Australia/Oceania

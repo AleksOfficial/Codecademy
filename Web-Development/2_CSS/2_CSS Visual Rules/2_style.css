@@ -1,0 +1,104 @@
+/*fonts refers to the techical term typeface or font-family; changing it by font-familiy in CSS
+default in browser is Times New Roman
+limit number of typefaces to 2-3-> Helps load webpage faster
+if name of typeface more than 1 word: Quotation marks
+font-size: 18 px = how big is text
+font-weight = how thicc is a text -> This attribute depends on whether the font supports thicc styles or not.
+text-align = Where the text/elements in container appear/s on the webbrowser-> default is left side; element that holds it like divs -> parent
+color: can be either foreground or background
+-> foreground = elements f.e. p/h1
+-> background = background of the html file
+opacity = how transparent an element is, measured in 0-1
+background-image:sets the background of an Element to an image; -> background-image: url("...");
+!important attribute -> Specific attributes trump everything, no matter how specific following selectors become
+
+Wether or not a Color combination works can be checked with some contrast checkers or smth.
+The Non-Designer’s Design Book is f.e. a tool for it. idk if it's really a book, i'll check on it later
+
+
+*/
+body {
+  /* Old browsers */
+  background: #141E30;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(-45deg, #35577D, #141E30);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(-45deg, #35577D, #141E30);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #FFF !important;
+  font-size: 2em;
+  padding-top: 100px;
+  width: 100%;
+  font-family: Georgia;
+  text-align: center;
+}
+
+h2 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 24px;
+  padding-bottom: 30px;
+  text-align: left;
+  width: 70%;
+  font-family: Georgia;
+}
+
+p {
+  color: AliceBlue;
+  line-height: 1.3em;
+  text-align: left;
+  width: 100%;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.byline {
+  font-family: Helvetica;
+  color: rgba(255, 255, 255, 0.5);
+  float: left;
+  font-size: 14px;
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+
+.caption {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 14px;
+  margin-left: 20px;
+  padding: 10px;
+  position: relative;
+  top: 80%;
+  width: 60%;
+  background-color: white;
+  color: black;
+  opacity: 0.75;
+}
+
+.content {
+  padding: 40px;
+}
+
+.image {
+  background-image: url("https://content.codecademy.com/courses/freelance-1/unit-2/soccer.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+.writer-img {
+  -webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+  -moz-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+  box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+  float: left;
+  width: 50px;
+}

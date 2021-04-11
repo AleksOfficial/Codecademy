@@ -1,0 +1,35 @@
+p{
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+  color:maroon;
+}
+h5,p{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h5{
+  
+  color:rebeccapurple;
+}
+.title{
+  color:teal;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.cursive{
+  font-family: cursive;
+}
+.capitalize{
+  text-transform: capitalize;
+}
+
+.publish-time{
+  color:gray;
+}
+h2.destination{
+  font-family: cursive;
+}
+.description h5{
+  color:teal;
+}

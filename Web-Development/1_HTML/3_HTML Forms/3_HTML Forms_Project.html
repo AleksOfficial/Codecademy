@@ -1,0 +1,74 @@
+<!--
+  Tips
+  Why add submit button at the start? debugging in smaller chunks + see changes
+  This way, you can see where the mistakes happen, maybe you forget an attribute/set a id/name incorrectly etc. 
+  you'll see it instantly tho
+  
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="3_Projectstyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <title>Form a Story</title>
+  </head>
+  <body>
+    <section id="top">
+      <img src="https://content.codecademy.com/courses/learn-html-forms/formAStoryLogo.svg" alt="Form A Story Logo">
+    </section>
+
+    <section id="main">
+      <h1>Complete the Form -<br> Complete the Story!</h1>
+      <hr>
+      <form action="3_story.html" method="GET">
+        <label for="animal-1">Animal: </label>
+        <input type="text" name="animal-1" id="animal-1" required>
+        <br>
+        <label for="animal-2">Another Animal: </label>
+        <input type="text" name="animal-2" id="animal-2" required>
+        <br>
+        <label for="animal-3">One More Animal: </label>
+        <input type="text" name="animal-3" id="animal-3" required>
+        <br>
+        <label for="adj-1">Adjective (past tense)</label>
+        <input type="text" name="adj-1" id="adj-1" required>
+        <br>
+        <label for="verb-1">Verb (ends in -ing)</label>
+        <input type="text" name="verb-1" id="verb-1" required>
+        <br>
+        <label for="num-1">Number: </label>
+        <input type="number" name="num-1" id="num-1" required>
+        <br>
+        <span>Yes or No:</span>
+        <input type="radio" name="answer" id="yes" value="yes">
+        <label for="yes">Yes</label>
+        <input type="radio" name="answer" id ="no" value="no">
+        <label for="no">No</label>
+        <br>
+        <label for="speed">Relative speed (ends in -er)</label>
+        <select id = "name" name="speed">
+          <option value="faster">Faster</option>
+          <option value="slower">Slower</option>
+        </select><br>
+        <label for="quote">Motivational Quote:</label>
+        <input type="text" list="quote-choices" id="quote" name="quote" required>
+        <datalist id="quote-choices">
+          <option value="Winner gets ice cream!"></option>
+          <option value="Loser gets nothing :( "></option>
+          <option value="Know your limits!"></option>
+          <option value="uhh.. chocolate is good. :)"></option>
+        </datalist><br>
+        <label for="message">Meaningful Message: </label><br>
+        <textarea name ="message" id="message" row="8" cols="40">
+          Don't do drugs kids!
+        </textarea><br>
+
+       
+        
+        <input type="submit" value="Form My Story!">
+      </form>
+      
+    </section>
+  </body>
+</html>
